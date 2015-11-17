@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=HealthPointObserver
+comment0.text=\n\ Write\ a\ description\ of\ class\ HealthPointObserver\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=player
+comment1.target=HealthPointObserver(Player)
+comment2.params=
+comment2.target=void\ update()
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ HealthPointObserver\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4
