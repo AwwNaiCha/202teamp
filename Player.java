@@ -51,10 +51,10 @@ public class Player extends Actor
         JPower = Power;
     }
     
-    //checks if character is touching thorn
-    public boolean touchingThornL()
+    //checks if character is touching ThornT
+    public boolean touchingThornTL()
     {
-        Actor actor = getOneObjectAtOffset(0-quarterWidth, 0, Thorn.class);
+        Actor actor = getOneObjectAtOffset(0-quarterWidth, 0, ThornT.class);
         if(actor == null) return false;
         int height = actor.getImage().getHeight();
         int width = actor.getImage().getWidth();
@@ -62,9 +62,9 @@ public class Player extends Actor
         return (getX()-quarterWidth) <= actor.getX() + width / 2;
 
     }
-    public boolean touchingThornR()
+    public boolean touchingThornTR()
     {
-        Actor actor = getOneObjectAtOffset(quarterWidth, 0, Thorn.class);
+        Actor actor = getOneObjectAtOffset(quarterWidth, 0, ThornT.class);
         if(actor == null) return false;
         int height = actor.getImage().getHeight();
         int width = actor.getImage().getWidth();
@@ -72,9 +72,9 @@ public class Player extends Actor
         if(Math.abs(getY() - actor.getY()) + Math.abs(getX() - actor.getX()) > width)return false;
         return (getX() + quarterWidth) >= actor.getX() - width / 2;
     }
-    public boolean touchingThornD()
+    public boolean touchingThornTD()
     {
-        Actor actor = getOneObjectAtOffset(0, halfWidth, Thorn.class);
+        Actor actor = getOneObjectAtOffset(0, halfWidth, ThornT.class);
         if(actor == null) return false;
         int height = actor.getImage().getHeight();
         int width = actor.getImage().getWidth();
@@ -84,9 +84,9 @@ public class Player extends Actor
 //          return actor != null;
     }
 
-    public boolean touchingThornU()
+    public boolean touchingThornTU()
     {
-        Actor actor = getOneObjectAtOffset(0, 0-halfWidth, Thorn.class);
+        Actor actor = getOneObjectAtOffset(0, 0-halfWidth, ThornT.class);
         if(actor == null) return false;
         int height = actor.getImage().getHeight();
         int width = actor.getImage().getWidth();
@@ -145,11 +145,11 @@ public class Player extends Actor
             {
                 keyPressed = 1;
             }
-            if( JPower > 0 && keyPressed == 1 && !belowWall() && !touchingThornU())
+            if( JPower > 0 && keyPressed == 1 && !belowWall() && !touchingThornTU())
             {
                 setLocation(getX(), getY()-JPower);
                 JPower--;
-            }else if (onGround() || onWall() || touchingThornD()){
+            }else if (onGround() || onWall() || touchingThornTD()){
                 JPower = 15;
                 VSpeed = 0;
                 keyPressed = 0;
@@ -170,10 +170,10 @@ public class Player extends Actor
         if(Action == "moveL")
         {
             if(Greenfoot.isKeyDown(Key) && Greenfoot.isKeyDown(Key2)
-                    && !touchingWallL() && !touchingThornL())
+                    && !touchingWallL() && !touchingThornTL())
             {
                 setLocation(getX()-Speed*2, getY());
-            }else if(Greenfoot.isKeyDown(Key) && !touchingWallL() && !touchingThornL())
+            }else if(Greenfoot.isKeyDown(Key) && !touchingWallL() && !touchingThornTL())
             {
                 setLocation(getX()-Speed, getY());
             }
@@ -186,10 +186,10 @@ public class Player extends Actor
         if(Action == "moveR")
         {
             if(Greenfoot.isKeyDown(Key) && Greenfoot.isKeyDown(Key2)
-                    && !touchingWallR() && !touchingThornR())
+                    && !touchingWallR() && !touchingThornTR())
             {
                 setLocation(getX()+Speed*2, getY());
-            }else if(Greenfoot.isKeyDown(Key) && !touchingWallR() && !touchingThornR())
+            }else if(Greenfoot.isKeyDown(Key) && !touchingWallR() && !touchingThornTR())
             {
                 setLocation(getX()+Speed, getY());
             }

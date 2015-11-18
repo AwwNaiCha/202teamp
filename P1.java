@@ -24,7 +24,7 @@ public class P1 extends Player
         System.out.println(hpState);
         setHPState(--hpState);
         */
-       if(getOneIntersectingObject (Thorn.class) != null) {
+       if(getOneIntersectingObject (ThornT.class) != null) {
            int hpState = getHPState();
            setHPState(--hpState);
        }

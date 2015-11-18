@@ -107,16 +107,16 @@ public class Worldy extends World
             addObject(wall, 32, 382);
             wall.setLocation(525, 475 + jump * 50);
         }
-        //set thorn
-        Thorn thorn1 = new Thorn();
-        addObject(thorn1, 32, 382);
-        thorn1.setLocation(625, 625);
-        Thorn thorn2 = new Thorn();
-        addObject(thorn2, 32, 382);
-        thorn2.setLocation(775, 625);
-        Thorn thorn3 = new Thorn();
-        addObject(thorn3, 32, 382);
-        thorn3.setLocation(825, 625);
+        //set ThornT
+        ThornT ThornT1 = new ThornT();
+        addObject(ThornT1, 32, 382);
+        ThornT1.setLocation(625, 625);
+        ThornT ThornT2 = new ThornT();
+        addObject(ThornT2, 32, 382);
+        ThornT2.setLocation(775, 625);
+        ThornT ThornT3 = new ThornT();
+        addObject(ThornT3, 32, 382);
+        ThornT3.setLocation(825, 625);
         
         /**second page  
          * x: 1025 - 1975
@@ -209,22 +209,22 @@ public class Worldy extends World
             addObject(wall, 32, 382);
             wall.setLocation(1975, 25 + right * 50);
         }
-        //set thorn
-        Thorn thorn4 = new Thorn();
-        addObject(thorn4, 32, 382);
-        thorn4.setLocation(1125, 225);
-        Thorn thorn5 = new Thorn();
-        addObject(thorn5, 32, 382);
-        thorn5.setLocation(1275, 325);
-        Thorn thorn6 = new Thorn();
-        addObject(thorn6, 32, 382);
-        thorn6.setLocation(1875, 325);
-        Thorn thorn7 = new Thorn();
-        addObject(thorn7, 32, 382);
-        thorn7.setLocation(1825, 625);
-        Thorn thorn8 = new Thorn();
-        addObject(thorn8, 32, 382);
-        thorn8.setLocation(1825, 225);
+        //set ThornT
+        ThornT ThornT4 = new ThornT();
+        addObject(ThornT4, 32, 382);
+        ThornT4.setLocation(1125, 225);
+        ThornT ThornT5 = new ThornT();
+        addObject(ThornT5, 32, 382);
+        ThornT5.setLocation(1275, 325);
+        ThornT ThornT6 = new ThornT();
+        addObject(ThornT6, 32, 382);
+        ThornT6.setLocation(1875, 325);
+        ThornT ThornT7 = new ThornT();
+        addObject(ThornT7, 32, 382);
+        ThornT7.setLocation(1825, 625);
+        ThornT ThornT8 = new ThornT();
+        addObject(ThornT8, 32, 382);
+        ThornT8.setLocation(1825, 225);
         
         /**third page  
          * x: 1975 - 2925
@@ -257,10 +257,10 @@ public class Worldy extends World
             addObject(wall, 32, 382);
             wall.setLocation(2175, step * 50 + 175);
         }
-        //hidden thorn
-        Thorn thorn9 = new Thorn();
-        addObject(thorn9, 32, 382);
-        thorn9.setLocation(2225, 165);
+        //hidden ThornT
+        ThornT ThornT9 = new ThornT();
+        addObject(ThornT9, 32, 382);
+        ThornT9.setLocation(2225, 165);
         Wall jump2 = new Wall();
         addObject(jump2, 32, 382);
         jump2.setLocation(2275, 175);
@@ -312,83 +312,83 @@ public class Worldy extends World
             addObject(wall, 32, 382);
             wall.setLocation(2675, step * 50 + 475);
         }
-        //set thorn
-        Thorn thorn10 = new Thorn();
-        addObject(thorn10, 32, 382);
-        thorn10.setLocation(2825, 175);
-        Thorn thorn11 = new Thorn();
-        addObject(thorn11, 32, 382);
-        thorn11.setLocation(2825, 625);
-        Thorn thorn12 = new Thorn();
-        addObject(thorn12, 32, 382);
-        thorn12.setLocation(2775, 275);
-        Thorn thorn13 = new Thorn();
-        addObject(thorn13, 32, 382);
-        thorn13.setLocation(2675, 325);
-        Thorn thorn14 = new Thorn();
-        addObject(thorn14, 32, 382);
-        thorn14.setLocation(2875, 425);
+        //set ThornT
+        ThornD ThornT10 = new ThornD();
+        addObject(ThornT10, 32, 382);
+        ThornT10.setLocation(2825, 175);
+        ThornT ThornT11 = new ThornT();
+        addObject(ThornT11, 32, 382);
+        ThornT11.setLocation(2825, 625);
+        ThornT ThornT12 = new ThornT();
+        addObject(ThornT12, 32, 382);
+        ThornT12.setLocation(2775, 275);
+        ThornT ThornT13 = new ThornT();
+        addObject(ThornT13, 32, 382);
+        ThornT13.setLocation(2675, 325);
+        ThornL ThornT14 = new ThornL();
+        addObject(ThornT14, 32, 382);
+        ThornT14.setLocation(2875, 425);
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2025, sharp * 150 + 275);
+            ThornD ThornD = new ThornD();
+            addObject(ThornD, 32, 382);
+            ThornD.setLocation(2025, sharp * 150 + 275);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2125, sharp * 150 + 225);
+            ThornD ThornD = new ThornD();
+            addObject(ThornD, 32, 382);
+            ThornD.setLocation(2125, sharp * 150 + 225);
         }
-        //wheel-thorn
+        //wheel-ThornT
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2275 + sharp * 200, 275);
-        }
-        for(int sharp = 0; sharp < 2; sharp++)
-        {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2325 + sharp * 200, 225);
+            ThornL ThornL = new ThornL();
+            addObject(ThornL, 32, 382);
+            ThornL.setLocation(2275 + sharp * 200, 275);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2375 + sharp * 200, 275);
+            ThornT ThornT = new ThornT();
+            addObject(ThornT, 32, 382);
+            ThornT.setLocation(2325 + sharp * 200, 225);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2325 + sharp * 200, 325);
+            ThornR ThornR = new ThornR();
+            addObject(ThornR, 32, 382);
+            ThornR.setLocation(2375 + sharp * 200, 275);
+        }
+        for(int sharp = 0; sharp < 2; sharp++)
+        {
+            ThornD ThornD = new ThornD();
+            addObject(ThornD, 32, 382);
+            ThornD.setLocation(2325 + sharp * 200, 325);
         }
         //three-limit
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2275 + sharp * 150, 475);
+            ThornD ThornD = new ThornD();
+            addObject(ThornD, 32, 382);
+            ThornD.setLocation(2275 + sharp * 150, 475);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2275 + sharp * 150, 575);
+            ThornT ThornT = new ThornT();
+            addObject(ThornT, 32, 382);
+            ThornT.setLocation(2275 + sharp * 150, 575);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2225 + sharp * 150, 525);
+            ThornR ThornR = new ThornR();
+            addObject(ThornR, 32, 382);
+            ThornR.setLocation(2225 + sharp * 150, 525);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            Thorn thorn = new Thorn();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(2325 + sharp * 150, 525);
+            ThornL ThornL = new ThornL();
+            addObject(ThornL, 32, 382);
+            ThornL.setLocation(2325 + sharp * 150, 525);
         }
     }
 }

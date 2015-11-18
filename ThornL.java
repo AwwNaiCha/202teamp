@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Thorn extends Actor
+public class ThornL extends Actor
 {
     /**
      * Act - do whatever the Thorn wants to do. This method is called whenever
