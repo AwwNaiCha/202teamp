@@ -16,7 +16,7 @@ public class ThornD extends ScrollActor
     
     public void act() 
     { 
-        move(); 
+       
     }
  
     public void move() 

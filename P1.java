@@ -17,32 +17,22 @@ public class P1 extends Player {
         Action("jump/fall", " ", "up", " ", 10, 0);
         Action("moveL", " ", "left", "shift", 10, 5);
         Action("moveR", " ", "right", "shift", 10, 5);
-<<<<<<< Updated upstream
-
-
         int hpState = 0;
 
-=======
-        
         /*
         int hpState = getHPState();
         System.out.println("this is hpscore");
         System.out.println(hpState);
         setHPState(--hpState);
         */
->>>>>>> Stashed changes
+
         if (isTouchingThorn(ThornT.class, Player.Direction.LEFT)
                 || isTouchingThorn(ThornD.class, Player.Direction.DOWN)
                 || isTouchingThorn(ThornL.class, Player.Direction.LEFT)
-
-<<<<<<< Updated upstream
-                || isTouchingThorn(ThornR.class, Player.Direction.RIGHT)) {
-            hpState = getHPState();
-=======
                 || isTouchingThorn(ThornR.class, Player.Direction.RIGHT))
                 {
-            int hpState = getHPState();
->>>>>>> Stashed changes
+             hpState = getHPState();
+
             setHPState(--hpState);
         } else if (isTouching(Fish.class, Player.Direction.DOWN)
                 || isTouching(Fish.class, Player.Direction.LEFT)

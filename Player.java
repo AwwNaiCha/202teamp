@@ -179,7 +179,8 @@ public class Player extends ScrollActor {
                     && !isTouchingThorn(ThornD.class, Direction.DOWN)
                     && !isTouchingThorn(ThornT.class, Direction.DOWN)
                     && !isTouchingThorn(ThornL.class, Direction.DOWN)
-                    && !isTouchingThorn(ThornR.class, Direction.DOWN)) {
+                    && !isTouchingThorn(ThornR.class, Direction.DOWN)
+                    && !isTouching(Fish.class, Direction.DOWN)) {
                 setLocation(getX(), getY() - JPower);
                 JPower--;
             } else if (onWall()
@@ -220,7 +221,7 @@ public class Player extends ScrollActor {
             }
             else if(isTouching(Fish.class, Direction.LEFT)){
                 
-                Actor f = (Actor) getWorld().getObjects(Fish.class).get(0);
+                Actor f = (Actor) getWorld().getObjectsAt(getX(), getY(), null);
                 getWorld().removeObject(f);
             }
             if (inGround() || onGround()) {

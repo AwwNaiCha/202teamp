@@ -1,11 +1,6 @@
 #Greenfoot properties
-<<<<<<< Updated upstream
-#Sat Nov 21 11:24:14 PST 2015
+#Sat Nov 21 13:08:57 PST 2015
 target16.name=ScrollActor
-=======
-#Sat Nov 21 11:29:48 PST 2015
-target16.name=ThornR
->>>>>>> Stashed changes
 target2.name=P1
 class.ScrollWorld.superclass=greenfoot.World
 target9.name=ThornL
@@ -18,12 +13,8 @@ class.ThornT.image=top.png
 target14.type=ClassTarget
 dependency25.type=UsesDependency
 dependency22.from=P1
-<<<<<<< Updated upstream
 target15.width=80
 dependency29.from=P1
-=======
-target15.width=90
->>>>>>> Stashed changes
 target15.height=50
 target7.type=ClassTarget
 target15.typeParameters=
@@ -36,13 +27,8 @@ target6.naviview.expanded=false
 class.Fish.image=small.png
 target6.editor.width=900
 dependency1.type=UsesDependency
-<<<<<<< Updated upstream
 target16.y=370
 target16.x=100
-=======
-target16.y=310
-target16.x=10
->>>>>>> Stashed changes
 dependency8.type=UsesDependency
 dependency5.from=HealthPointObserver
 target12.y=310
@@ -52,37 +38,22 @@ target3.editor.x=57
 project.charset=UTF-8
 target12.typeParameters=
 dependency15.to=ThornR
-<<<<<<< Updated upstream
 target15.name=ThornT
 target5.height=50
 target1.name=Worldy
 version=2.8.0
 target11.naviview.expanded=false
-=======
-target15.name=ScrollActor
-target5.height=50
-target1.name=Worldy
-target11.naviview.expanded=false
-version=2.8.0
->>>>>>> Stashed changes
 target8.name=Box
 dependency10.type=UsesDependency
 dependency17.type=UsesDependency
 dependency14.from=Player
-<<<<<<< Updated upstream
 package.numTargets=17
-=======
-package.numTargets=16
->>>>>>> Stashed changes
 class.Player.superclass=ScrollActor
 class.ThornR.superclass=ScrollActor
 target13.type=ClassTarget
 dependency24.type=UsesDependency
 dependency21.from=Observer
-<<<<<<< Updated upstream
 dependency28.from=Worldy
-=======
->>>>>>> Stashed changes
 dependency9.to=Wall
 target6.type=ClassTarget
 class.Wall.image=wallblue.png
@@ -92,22 +63,13 @@ target3.y=10
 target3.x=70
 >>>>>>>=Stashed changes
 target7.typeParameters=
-<<<<<<< Updated upstream
 target8.height=50
 dependency26.to=ThornL
-mainWindow.y=22
-mainWindow.x=50
+mainWindow.y=23
+mainWindow.x=46
 target12.showInterface=false
 target3.showInterface=false
 target17.typeParameters=
-=======
-dependency26.to=ThornL
-target8.height=50
-mainWindow.y=22
-mainWindow.x=47
-target12.showInterface=false
-target3.showInterface=false
->>>>>>> Stashed changes
 dependency3.to=ScrollWorld
 target1.width=80
 dependency7.type=UsesDependency
@@ -118,16 +80,10 @@ target5.editor.x=57
 dependency20.to=Observer
 target5.editor.height=700
 class.P1.image=stand-right-34x23.png
-class.Fish.superclass=ScrollActor
-<<<<<<< Updated upstream
+class.Fish.superclass=Player
 target14.name=Fish
 target9.height=50
 target2.naviview.expanded=false
-=======
-target14.name=ThornT
-target2.naviview.expanded=false
-target9.height=50
->>>>>>> Stashed changes
 target11.showInterface=false
 target2.showInterface=false
 target7.name=ThornD
@@ -145,26 +101,16 @@ dependency23.type=UsesDependency
 dependency20.from=Player
 class.fish.image=small.png
 target4.width=80
-<<<<<<< Updated upstream
 target9.showInterface=false
 dependency27.from=Player
-=======
-dependency27.from=Player
-target9.showInterface=false
->>>>>>> Stashed changes
 target10.showInterface=false
 target1.showInterface=false
 target5.type=ClassTarget
 dependency10.to=ThornD
 class.HealthPointObserver.superclass=Observer
 target2.height=50
-<<<<<<< Updated upstream
 target15.y=250
 target15.x=160
-=======
-target15.y=370
-target15.x=100
->>>>>>> Stashed changes
 target11.y=190
 target3.editor.height=700
 target11.x=100
@@ -172,10 +118,7 @@ readme.height=58
 class.ThornL.image=left.png
 target5.editor.width=900
 target8.showInterface=false
-<<<<<<< Updated upstream
 target17.showInterface=false
-=======
->>>>>>> Stashed changes
 dependency27.to=ThornR
 dependency3.from=ScrollActor
 target11.typeParameters=
@@ -183,13 +126,8 @@ dependency6.type=UsesDependency
 class.ScrollWorld.image=bricks2.jpg
 dependency4.to=ScrollActor
 target7.editor.y=42
-<<<<<<< Updated upstream
 target9.typeParameters=
 target7.editor.x=47
-=======
-target7.editor.x=47
-target9.typeParameters=
->>>>>>> Stashed changes
 target16.height=50
 target7.width=80
 <<<<<<<=Updated upstream
@@ -212,11 +150,8 @@ target2.y=70
 target11.type=ClassTarget
 target2.x=160
 dependency22.type=UsesDependency
-<<<<<<< Updated upstream
 target17.height=50
 dependency29.type=UsesDependency
-=======
->>>>>>> Stashed changes
 dependency26.from=Player
 target6.typeParameters=
 target4.type=ClassTarget
@@ -225,18 +160,12 @@ target6.height=50
 target7.editor.width=900
 dependency5.type=UsesDependency
 dependency2.from=Worldy
-<<<<<<< Updated upstream
 target17.width=80
-=======
->>>>>>> Stashed changes
 class.Observer.superclass=greenfoot.Actor
 dependency9.from=Box
 class.Ground.superclass=ScrollActor
 target10.height=50
-<<<<<<< Updated upstream
 dependency28.to=Fish
-=======
->>>>>>> Stashed changes
 target13.naviview.expanded=true
 target2.editor.width=900
 target3.typeParameters=
@@ -250,7 +179,6 @@ dependency22.to=ThornD
 dependency14.type=UsesDependency
 dependency11.from=Worldy
 dependency18.from=Box
-<<<<<<< Updated upstream
 target14.y=370
 target14.x=200
 target10.type=ClassTarget
@@ -259,25 +187,13 @@ dependency21.type=UsesDependency
 package.numDependencies=29
 target17.type=ClassTarget
 dependency28.type=UsesDependency
-=======
-target14.y=250
-target14.x=160
-target10.type=ClassTarget
-dependency18.to=Ground
-dependency21.type=UsesDependency
-package.numDependencies=27
->>>>>>> Stashed changes
 dependency25.from=Player
 target10.y=250
 target3.type=ClassTarget
 target10.x=10
 target3.naviview.expanded=true
 readme.name=@README
-<<<<<<< Updated upstream
 target16.width=90
-=======
-target16.width=80
->>>>>>> Stashed changes
 target10.typeParameters=
 target8.typeParameters=
 dependency12.to=ThornT
@@ -292,10 +208,7 @@ target9.y=130
 target4.editor.y=42
 target9.x=100
 target4.editor.x=57
-<<<<<<< Updated upstream
 dependency29.to=Fish
-=======
->>>>>>> Stashed changes
 target11.name=HealthPointObserver
 target5.y=70
 target5.x=70
@@ -315,11 +228,7 @@ target3.width=80
 dependency17.from=Player
 dependency23.to=ThornL
 dependency20.type=UsesDependency
-<<<<<<< Updated upstream
 target16.type=AbstractTarget
-=======
-target16.type=ClassTarget
->>>>>>> Stashed changes
 dependency27.type=UsesDependency
 dependency24.from=P1
 target2.type=ClassTarget
@@ -341,7 +250,7 @@ dependency7.from=Worldy
 target6.width=80
 readme.width=47
 target6.editor.y=42
-mainWindow.height=778
+mainWindow.height=777
 target9.naviview.expanded=true
 target6.editor.x=95
 target14.showInterface=false
@@ -351,14 +260,10 @@ class.GameOverObserver.superclass=Observer
 target2.width=80
 target10.name=GameOverObserver
 class.FPS.superclass=greenfoot.Actor
-<<<<<<< Updated upstream
 target17.y=310
 target17.x=10
 class.ThornR.image=right.png
 target17.name=ThornR
-=======
-class.ThornR.image=right.png
->>>>>>> Stashed changes
 target3.name=Player
 target13.y=190
 target7.height=50
@@ -372,11 +277,7 @@ dependency19.type=UsesDependency
 dependency16.from=Worldy
 target13.showInterface=false
 target4.showInterface=false
-<<<<<<< Updated upstream
 target15.type=ClassTarget
-=======
-target15.type=AbstractTarget
->>>>>>> Stashed changes
 class.ScrollActor.superclass=greenfoot.Actor
 dependency23.from=P1
 dependency26.type=UsesDependency
@@ -405,11 +306,6 @@ dependency14.to=ThornT
 class.Wall.superclass=ScrollActor
 target1.height=50
 class.ThornT.superclass=ScrollActor
-<<<<<<< Updated upstream
-mainWindow.width=1230
+mainWindow.width=1234
 target4.typeParameters=
-=======
-target4.typeParameters=
-mainWindow.width=1233
->>>>>>> Stashed changes
 =\=\=\=\=\=\=
