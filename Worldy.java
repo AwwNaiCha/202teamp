@@ -12,7 +12,7 @@ public class Worldy extends ScrollWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 700, 1, 2950, 700);
-        setPaintOrder(P1.class, Wall.class, Ground.class);
+        setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
         P1 p1 = new P1();
