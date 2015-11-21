@@ -211,11 +211,17 @@ public class Player extends ScrollActor {
                     && !isTouchingThorn(ThornT.class, Direction.LEFT)
                     && !isTouchingThorn(ThornD.class, Direction.LEFT)
                     && !isTouchingThorn(ThornL.class, Direction.LEFT)
-                    && !isTouchingThorn(ThornR.class, Direction.LEFT)) {
+                    && !isTouchingThorn(ThornR.class, Direction.LEFT)
+                    && !isTouching(Fish.class, Direction.LEFT)) {
                 Actor p = (Actor) getWorld().getObjects(P1.class).get(0);
 
                 p.setLocation(getX() - Speed, getY());
                 getWorld().moveCamera(-Speed);
+            }
+            else if(isTouching(Fish.class, Direction.LEFT)){
+                
+                Actor f = (Actor) getWorld().getObjects(Fish.class).get(0);
+                getWorld().removeObject(f);
             }
             if (inGround() || onGround()) {
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
@@ -229,11 +235,18 @@ public class Player extends ScrollActor {
                     && !isTouchingThorn(ThornT.class, Direction.RIGHT)
                     && !isTouchingThorn(ThornD.class, Direction.RIGHT)
                     && !isTouchingThorn(ThornL.class, Direction.RIGHT)
-                    && !isTouchingThorn(ThornR.class, Direction.RIGHT)) {
+                    && !isTouchingThorn(ThornR.class, Direction.RIGHT)
+                    && !isTouching(Fish.class, Direction.RIGHT)
+                    ) {
                 Actor p = (Actor) getWorld().getObjects(P1.class).get(0);
 
                 p.setLocation(getX() + Speed, getY());
                 getWorld().moveCamera(Speed);
+            }
+             else if(isTouching(Fish.class, Direction.RIGHT)){
+                
+                Actor f = (Actor) getWorld().getObjects(Fish.class).get(0);
+                getWorld().removeObject(f);
             }
             if (inGround() || onGround()) {
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);

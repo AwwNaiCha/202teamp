@@ -11,13 +11,11 @@ public class Worldy extends ScrollWorld
     public Worldy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-<<<<<<< Updated upstream
-        super(900, 700, 1, 2950, 700);
-       // super(2950, 700, 1, 2950, 700); //for wall construction test
-=======
+
+       // super(2950, 700, 1, 2950, 700); //for wall construction tes
         //super(900, 700, 1, 4850, 700);
-        super(4850, 700, 1, 4850, 700); //for wall construction test
->>>>>>> Stashed changes
+        super(900, 700, 1, 4850, 700); //for wall construction test
+
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
@@ -33,6 +31,7 @@ public class Worldy extends ScrollWorld
         
         prepare();
     }
+ 
 
     /**
      * Prepare the world for the start of the program. That is: create the initial
@@ -89,8 +88,10 @@ public class Worldy extends ScrollWorld
             wall.setLocation(175 + start * 50, 175);
         }
         Fish f1 = new Fish();
-        addObject(f1, 333, 333);
-        f1.setLocation(975, 125);
+    
+        addObject(f1, 975, 125);
+        f1.act();
+        ////f1.setLocation(975, 125);
         //page seperator
         for(int right = 1; right < 10; right++)
         {
