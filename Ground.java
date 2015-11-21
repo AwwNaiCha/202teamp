@@ -21,7 +21,7 @@ public class Ground extends ScrollActor
     public void move() 
     { 
         // checking edges  
-        if ((direction < 0 && getX() == 100) || (direction > 0 && getX() == 600)) 
+        if ((direction < 0 && getGlobalX() == 1325) || (direction > 0 && getGlobalX() == 1675)) 
         {direction = -direction;} 
         move(direction);
     }

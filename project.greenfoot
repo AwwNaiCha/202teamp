@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #Greenfoot project file
 class.Box.image=weave.jpg
 class.Box.superclass=Player
@@ -18,6 +19,48 @@ class.ThornD.superclass=ScrollActor
 class.ThornL.image=left.png
 class.ThornL.superclass=ScrollActor
 class.ThornR.image=right.png
+=======
+#Greenfoot properties
+#Sat Nov 21 11:06:51 PST 2015
+target2.width=80
+target8.name=Box
+target11.y=190
+target11.x=100
+target5.naviview.expanded=false
+dependency12.type=UsesDependency
+dependency22.type=UsesDependency
+target1.type=ClassTarget
+target7.showInterface=false
+mainWindow.height=777
+target2.editor.y=100
+target6.typeParameters=
+target2.editor.x=380
+dependency9.to=Wall
+target1.height=50
+target13.name=Observer
+dependency16.type=UsesDependency
+target8.y=130
+class.ScrollActor.superclass=greenfoot.Actor
+target8.x=190
+dependency21.to=Player
+target2.editor.width=900
+class.P1.image=stand-right-34x23.png
+class.fish.image=small.png
+dependency2.type=UsesDependency
+target5.type=ClassTarget
+target6.y=370
+target6.x=10
+dependency19.to=P1
+target1.showInterface=false
+target4.y=130
+dependency10.from=Worldy
+target4.x=10
+dependency6.type=UsesDependency
+target4.showInterface=false
+target9.type=ClassTarget
+dependency20.from=Player
+target2.y=70
+>>>>>>> Stashed changes
 class.ThornR.superclass=ScrollActor
 class.ThornT.image=top.png
 class.ThornT.superclass=ScrollActor
@@ -208,9 +251,15 @@ target3.editor.x=57
 target3.editor.y=42
 target3.height=50
 target3.name=Player
+<<<<<<< Updated upstream
 target3.naviview.expanded=true
 target3.showInterface=false
 target3.type=ClassTarget
+=======
+class.ScrollWorld.image=bricks2.jpg
+class.fish.superclass=ScrollActor
+target6.showInterface=false
+>>>>>>> Stashed changes
 target3.typeParameters=
 target3.width=80
 target3.x=70
