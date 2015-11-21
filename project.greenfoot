@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Nov 21 10:04:33 PST 2015
+#Sat Nov 21 10:17:29 PST 2015
 target2.width=80
 target8.name=Box
 target11.y=190
@@ -202,7 +202,7 @@ target3.name=Player
 class.ScrollWorld.image=bricks2.jpg
 target6.showInterface=false
 target3.typeParameters=
-class.Ground.image=rocket.png
+class.Ground.image=alligator.png
 class.Wall.superclass=ScrollActor
 dependency3.to=ScrollWorld
 target9.showInterface=false

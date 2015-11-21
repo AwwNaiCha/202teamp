@@ -182,8 +182,7 @@ public class Player extends ScrollActor {
                     && !isTouchingThorn(ThornR.class, Direction.DOWN)) {
                 setLocation(getX(), getY() - JPower);
                 JPower--;
-            } else if (onGround()
-                    || onWall()
+            } else if (onWall()
                     || isTouchingThorn(ThornT.class, Direction.UP)
                     || isTouchingThorn(ThornD.class, Direction.UP) ||
                     isTouchingThorn(ThornL.class, Direction.UP) || isTouchingThorn(ThornR.class, Direction.UP)) {
@@ -194,9 +193,12 @@ public class Player extends ScrollActor {
                 setLocation(getX(), getY() - VSpeed);
                 VSpeed--;
             }
-            if (inGround()) {
+            if (inGround() || onGround()) {
+                JPower = 15;
+                VSpeed = 0;
+                keyPressed = 0;
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
-                setLocation(getX(), getY() - ground.getImage().getHeight());
+                setLocation(getX(), getY());
             }
             if (belowWall()) {
                 JPower = 0;
@@ -217,7 +219,7 @@ public class Player extends ScrollActor {
             }
             if (inGround() || onGround()) {
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
-                setLocation(getX(), getY() - ground.getImage().getHeight());
+                setLocation(getX(), getY());
             }
         }
         if (Action == "moveR") {
@@ -235,7 +237,7 @@ public class Player extends ScrollActor {
             }
             if (inGround() || onGround()) {
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
-                setLocation(getX(), getY() - ground.getImage().getHeight());
+                setLocation(getX(), getY());
             }
         }
     }
