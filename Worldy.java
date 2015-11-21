@@ -6,13 +6,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Worldy extends World
+public class Worldy extends ScrollWorld
 {
     public Worldy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2950, 700, 1);
-
+        super(1000, 700, 1, 2950, 700);
+        setPaintOrder(P1.class, Wall.class, Ground.class);
+        
+        /**starting point of the cat  */
+        P1 p1 = new P1();
+        addObject(p1, 133, 321);
+        p1.setLocation(575, 125);
+        addCameraFollower(p1, 0, 0);
+        addObject(new FPS(), 85, 15);
+        
+        //attach obsever to the cat
+        HealthPointObserver hpObserver = new HealthPointObserver(p1);
+        addObject(hpObserver, 800, 100);
+        
         prepare();
     }
 
@@ -55,14 +67,7 @@ public class Worldy extends World
             wall.setLocation(2925, 25 + right * 50);
         }
         
-        /**starting point of the cat  */
-        P1 p1 = new P1();
-        addObject(p1, 133, 321);
-        p1.setLocation(575, 125);
         
-        //attach obsever to the cat
-        HealthPointObserver hpObserver = new HealthPointObserver(p1);
-        addObject(hpObserver, 800, 100);
         
         
         

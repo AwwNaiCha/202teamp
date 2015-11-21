@@ -1,0 +1,58 @@
+Class documentation
+<---- javadoc command: ---->
+/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Frameworks/jdk.framework/Versions/A/Contents/Home/bin/javadoc
+-author
+-version
+-nodeprecated
+-protected
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/extensions/greenfoot.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/bluejcore.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/bluejeditor.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/bluejext.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/AppleJavaExtensions.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/junit-4.11.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/hamcrest-core-1.3.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/bluej.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/commons-httpclient-3.1.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/commons-logging-api-1.1.2.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/commons-codec-1.3.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/jl1.0.1.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/opencsv-2.3.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/xom-1.2.9.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/jna-4.2.0.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/jna-platform-4.2.0.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/guava-17.0.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/javassist-3.18.0.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/commons-vfs2-2.0.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/httpclient-4.1.1.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/httpcore-4.1.jar:/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/httpmime-4.1.1.jar:/Users/huimin/Documents/workspace/SourceCode-202
+-d
+/Users/huimin/Documents/workspace/SourceCode-202/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/Users/huimin/Downloads/Greenfoot 3.0.0/Greenfoot.app/Contents/Resources/Java/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/Users/huimin/Documents/workspace/SourceCode-202/FPS.java
+<---- end of javadoc command ---->
+Loading source file /Users/huimin/Documents/workspace/SourceCode-202/FPS.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_60
+Building tree for all the packages and classes...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/FPS.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/FPS.Mode.html...
+/Users/huimin/Documents/workspace/SourceCode-202/ScrollWorld.java:37: error: cannot find symbol
+    private final ArrayList<ScrollActor> objects;
+                            ^
+  symbol:   class ScrollActor
+  location: class ScrollWorld
+/Users/huimin/Documents/workspace/SourceCode-202/ScrollWorld.java:38: error: cannot find symbol
+    private final ArrayList<ScrollActor> camFollowers;
+                            ^
+  symbol:   class ScrollActor
+  location: class ScrollWorld
+/Users/huimin/Documents/workspace/SourceCode-202/ScrollWorld.java:129: error: cannot find symbol
+    public void addCameraFollower(ScrollActor cameraFollower, int x, int y)
+                                  ^
+  symbol:   class ScrollActor
+  location: class ScrollWorld
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/package-frame.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/package-summary.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/allclasses-frame.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/allclasses-noframe.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/index.html...
+Generating /Users/huimin/Documents/workspace/SourceCode-202/doc/stylesheet.css...
+3 errors

@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 // this observer is used to observe player state
-public class Observer extends Actor
+public class Observer extends ScrollActor
 {
     /**
      * Act - do whatever the Observer wants to do. This method is called whenever

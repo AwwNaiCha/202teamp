@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=FPS
+comment0.text=\n\ Displays\ the\ number\ of\ frames\ per\ second\ on\ \n\ a\ given\ scenario.\n\ \n\ @author\ Michael\ Berry\ (mjrb4)\n\ @version\ 06/07/08\n
+comment1.params=
+comment1.target=FPS()
+comment1.text=\n\ Create\ a\ new\ FPS\ reading.\n
+comment2.params=val
+comment2.target=void\ setFPS(java.lang.Long)
+comment2.text=\n\ Set\ the\ value\ of\ the\ frames\ per\ second.\n\ @param\ val\ the\ value\ to\ set\ the\ FPS\ to.\n
+comment3.params=val
+comment3.target=void\ setFPS(java.lang.Double)
+comment3.text=\n\ Set\ the\ value\ of\ the\ frames\ per\ second.\n\ @param\ val\ the\ value\ to\ set\ the\ FPS\ to.\n
+comment4.params=
+comment4.target=double\ getFPS()
+comment4.text=\n\ Get\ the\ number\ of\ frames\ per\ second.\n\ @return\ the\ number\ of\ frames\ per\ second.\n
+comment5.params=
+comment5.target=void\ act()
+comment5.text=\n\ Calculate\ the\ FPS\ based\ on\ the\ mode,\ and\n\ update\ the\ reading.\n
+comment6.params=value
+comment6.target=void\ updateImage(java.lang.String)
+comment6.text=\n\ Draw\ the\ image.<p>\n\ Sven\ van\ Nigtevecht\ slightly\ changed\ this,\n\ not\ so\ special\ though.\n\ @param\ value\ the\ FPS\ value\n
+numComments=7

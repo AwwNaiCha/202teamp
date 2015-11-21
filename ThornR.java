@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ThornR extends Actor
+public class ThornR extends ScrollActor
 {
     /**
      * Act - do whatever the ThornR wants to do. This method is called whenever

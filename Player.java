@@ -8,7 +8,7 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player extends Actor
+public class Player extends ScrollActor
 {
     /////////////// methods and attributes used for observer/////////////////////////////////
     private List<Observer> observers = new ArrayList<Observer>();
@@ -113,7 +113,7 @@ public class Player extends Actor
 
     public boolean onWall()
     {
-        Actor actor = getOneObjectAtOffset(0, halfWidth, Wall.class);
+        Actor actor = getOneObjectAtOffset(0, getImage().getWidth() * 6/8, Wall.class);
         return actor != null;
     }
 
@@ -175,7 +175,10 @@ public class Player extends Actor
                 setLocation(getX()-Speed*2, getY());
             }else if(Greenfoot.isKeyDown(Key) && !touchingWallL() && !touchingThornTL())
             {
-                setLocation(getX()-Speed, getY());
+                Actor p = (Actor)getWorld().getObjects(P1.class).get(0);
+                
+                 p.setLocation(getX()-Speed, getY());
+                 getWorld().moveCamera(-Speed);
             }
             if(inGround())
             {
@@ -191,7 +194,10 @@ public class Player extends Actor
                 setLocation(getX()+Speed*2, getY());
             }else if(Greenfoot.isKeyDown(Key) && !touchingWallR() && !touchingThornTR())
             {
-                setLocation(getX()+Speed, getY());
+                Actor p = (Actor)getWorld().getObjects(P1.class).get(0);
+                
+                 p.setLocation(getX()+Speed, getY());
+                 getWorld().moveCamera(Speed);
             }
             if(inGround())
             {
