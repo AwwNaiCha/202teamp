@@ -11,11 +11,16 @@ public class Worldy extends ScrollWorld
     public Worldy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+<<<<<<< Updated upstream
 
        // super(2950, 700, 1, 2950, 700); //for wall construction tes
         //super(900, 700, 1, 4850, 700);
         super(900, 700, 1, 4850, 700); //for wall construction test
 
+=======
+        //super(900, 700, 1, 4850, 700);
+        super(4850, 700, 1, 4850, 700); //for wall construction test
+>>>>>>> Stashed changes
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
@@ -87,11 +92,21 @@ public class Worldy extends ScrollWorld
             addObject(wall, 32, 382);
             wall.setLocation(175 + start * 50, 175);
         }
+<<<<<<< Updated upstream
         Fish f1 = new Fish();
     
         addObject(f1, 975, 125);
         f1.act();
         ////f1.setLocation(975, 125);
+=======
+        //fish setting
+        for(int start = 0; start < 2; start++)
+        {
+            Fish f = new Fish();
+            addObject(f, 333, 333);
+            f.setLocation(925 + start * 50, 125);
+        }        
+>>>>>>> Stashed changes
         //page seperator
         for(int right = 1; right < 10; right++)
         {
@@ -122,15 +137,18 @@ public class Worldy extends ScrollWorld
             wall.setLocation(525, 475 + jump * 50);
         }
         //set ThornT
-        ThornT ThornT1 = new ThornT();
-        addObject(ThornT1, 32, 382);
-        ThornT1.setLocation(625, 625);
-        ThornT ThornT2 = new ThornT();
-        addObject(ThornT2, 32, 382);
-        ThornT2.setLocation(775, 625);
+        for(int jump = 0; jump < 3; jump++)
+        {
+            ThornT ThornT1 = new ThornT();
+            addObject(ThornT1, 32, 382);
+            ThornT1.setLocation(475 + jump * 200, 625);
+        }
         ThornT ThornT3 = new ThornT();
         addObject(ThornT3, 32, 382);
         ThornT3.setLocation(825, 625);
+        Fish f1 = new Fish();
+        addObject(f1, 333, 333);
+        f1.setLocation(425, 625);
         
         /**second page  
          * x: 1075 - 1975
@@ -280,10 +298,27 @@ public class Worldy extends ScrollWorld
         ThornT ThornT8 = new ThornT();
         addObject(ThornT8, 32, 382);
         ThornT8.setLocation(2775, 225);
+        //set Fishes
+        Fish f2 = new Fish();
+        addObject(f2, 333, 333);
+        f2.setLocation(2875, 75);
+        Fish f3 = new Fish();
+        addObject(f3, 333, 333);
+        f3.setLocation(2725, 325);
+        Fish f4 = new Fish();
+        addObject(f4, 333, 333);
+        f4.setLocation(2175, 125);
         
         /**fourth page  
          * x: 2925 - 3875
          */
+        //page seperator
+        for(int right = 1; right < 11; right++)
+        {
+            Wall wall = new Wall();
+            addObject(wall, 32, 382);
+            wall.setLocation(3875, 25 + right * 50);
+        }
         
         /**fifth page  
          * x: 3875 - 4825
