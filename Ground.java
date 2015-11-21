@@ -12,8 +12,17 @@ public class Ground extends ScrollActor
      * Act - do whatever the Ground wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int direction = 5;  
     public void act() 
-    {
-        // Add your action code here.
-    }    
+    { 
+        move(); 
+    }
+ 
+    public void move() 
+    { 
+        // checking edges  
+        if ((direction < 0 && getX() == 100) || (direction > 0 && getX() == 600)) 
+        {direction = -direction;} 
+        move(direction);
+    }
 }

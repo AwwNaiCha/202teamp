@@ -11,7 +11,8 @@ public class Worldy extends ScrollWorld
     public Worldy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 700, 1, 2950, 700);
+        //super(900, 700, 1, 2950, 700);
+        super(2950, 700, 1, 2950, 700); //for wall construction test
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
@@ -69,7 +70,9 @@ public class Worldy extends ScrollWorld
         
         
         
-        
+        Ground g = new Ground();
+        addObject(g, 100, 400);
+        g.move();
         
         
         
@@ -195,7 +198,7 @@ public class Worldy extends ScrollWorld
             addObject(wall, 32, 382);
             wall.setLocation(1825, step * 50 + 275);
         }
-        for(int step = 0; step < 7; step++)
+        for(int step = 0; step < 6; step++)
         {
             Wall wall = new Wall();
             addObject(wall, 32, 382);
@@ -223,7 +226,10 @@ public class Worldy extends ScrollWorld
         ThornT5.setLocation(1275, 325);
         ThornT ThornT6 = new ThornT();
         addObject(ThornT6, 32, 382);
-        ThornT6.setLocation(1875, 325);
+        ThornT6.setLocation(1925, 325);
+        Wall step3 = new Wall();
+        addObject(step3, 32, 382);
+        step3.setLocation(1925, 375);
         ThornT ThornT7 = new ThornT();
         addObject(ThornT7, 32, 382);
         ThornT7.setLocation(1825, 625);
@@ -241,17 +247,20 @@ public class Worldy extends ScrollWorld
             wall.setLocation(2125 + step * 150, 625);
         }
         //jumper
-        for(int step = 0; step < 3; step++)
+        for(int step = 0; step < 2; step++)
         {
             Wall wall = new Wall();
             addObject(wall, 32, 382);
-            wall.setLocation(2025, step * 150 + 225);
+            wall.setLocation(2025, step * 200 + 175);
         }
+        Wall jump1 = new Wall();
+        addObject(jump1, 32, 382);
+        jump1.setLocation(2025, 525);
         for(int step = 0; step < 3; step++)
         {
             Wall wall = new Wall();
             addObject(wall, 32, 382);
-            wall.setLocation(2125, step * 150 + 175);
+            wall.setLocation(2125, step * 150 + 125);
         }
        // Wall jump1 = new Wall();
         //addObject(jump1, 32, 382);
@@ -337,13 +346,13 @@ public class Worldy extends ScrollWorld
         {
             ThornD ThornD = new ThornD();
             addObject(ThornD, 32, 382);
-            ThornD.setLocation(2025, sharp * 150 + 275);
+            ThornD.setLocation(2025, sharp * 200 + 225);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
             ThornD ThornD = new ThornD();
             addObject(ThornD, 32, 382);
-            ThornD.setLocation(2125, sharp * 150 + 225);
+            ThornD.setLocation(2125, sharp * 150 + 175);
         }
         //wheel-ThornT
         for(int sharp = 0; sharp < 2; sharp++)
