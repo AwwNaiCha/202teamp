@@ -16,8 +16,8 @@ public class ShapeFactory extends Actor
       if(shapeType.equalsIgnoreCase("WALL")){  
          return new Wall();
          
-      //} //else if(shapeType.equalsIgnoreCase("GROUND")){
-         //return new Ground();
+      } else if(shapeType.equalsIgnoreCase("GROUND")){
+         return new Ground();
          
       } else if(shapeType.equalsIgnoreCase("THORND")){
          return new ThornD();

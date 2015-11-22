@@ -79,7 +79,7 @@ public class Worldy extends ScrollWorld
         
         //moving ground
         Ground g = new Ground();
-        addObject(g, 1325, 475);
+        addObject(g, 1326, 475);
         g.move();
         
         /**first page
