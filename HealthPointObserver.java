@@ -27,17 +27,22 @@ public class HealthPointObserver extends Observer
     public void update() {
         GreenfootImage newImage = getImage();
         newImage.clear();
-        
+       GreenfootImage image =  new GreenfootImage("bid.png");
+
+//        newImage = new GreenfootImage("small.png");
         Font fontObj = new Font("Comic Sans MS", Font.BOLD, 32);
         newImage.setFont(fontObj);
-        
-        newImage.setColor(Color.blue);
-        //newImage.fill();
-        //newImage.scale(newImage.getWidth()+20, newImage.getHeight());
-        //newImage.setColor(Color.black);
-        
-        newImage.drawString("fish X " + player.getHPState(), 30, 30);
+//
+        newImage.setColor(Color.white);
+//        newImage.fill();
+//        newImage.scale(newImage.getWidth()+20, newImage.getHeight());
+//        newImage.setColor(Color.black);
+        newImage.drawImage(image,10,25);
+
+
+        newImage.drawString( " X"  + player.getHPState(), 60, 50);
         setImage(newImage);
+       
     }
     
     /**

@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import javafx.scene.input.Dragboard;
 
+import java.lang.Class;
 import java.lang.Integer;
 import java.lang.Math;
 import java.util.*;
 import java.util.List;
+import java.awt.Point;
 
 /**
  * Write a description of class Player here.
@@ -13,12 +15,6 @@ import java.util.List;
  * @version (a version number or a date)
  */
 public class Player extends ScrollActor {
-    public static enum Direction {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT
-    }
 
     public Player() {
         super();
@@ -109,6 +105,7 @@ public class Player extends ScrollActor {
     public int quarterWidth = getImage().getWidth() / 4;
     public int halfWidth = getImage().getWidth() / 2;
 
+
     //set JPower
     public void JPower(int Power) {
         JPower = Power;
@@ -127,6 +124,20 @@ public class Player extends ScrollActor {
 
     }
 
+    public Actor getTochingObject(Class c, Direction d) {
+        initMap();
+
+        List<Integer> direction = directionListMap.get(d);
+        int dx = direction.get(0);
+        int dy = direction.get(1);
+        Actor actor = getOneObjectAtOffset(0 + dx, 0 + dy, c);
+        if (actor != null) {
+            return actor;
+        }
+        return null;
+    }
+
+
     public boolean isTouchingThorn(Class c, Direction d) {
 
         initThornMap();
@@ -144,7 +155,6 @@ public class Player extends ScrollActor {
         if (d == Direction.DOWN) return getY() + halfWidth >= actor.getY() - height / 2;
         return true;
     }
-
 
 
     public boolean onWall() {
@@ -167,70 +177,49 @@ public class Player extends ScrollActor {
         return actor != null;
     }
 
+    public Actor getOneObjectAtOffset(int dx, int dy, Class c){
+        return super.getOneObjectAtOffset(dx, dy, c);
+    }
+
+
+        
     /**
      * Listed actions so far are:jump/fall, moveL, moveR, boxPhysics
      */
     public void Action(String Action, String Char, String Key, String Key2, int AnimationFrames, int Speed) {
-        if (Action == "jump/fall") {
-            if (Greenfoot.isKeyDown(Key)) {
-                keyPressed = 1;
-            }
-            if (JPower > 0 && keyPressed == 1 && !belowWall()
-                    && !isTouchingThorn(ThornD.class, Direction.DOWN)
-                    && !isTouchingThorn(ThornT.class, Direction.DOWN)
-                    && !isTouchingThorn(ThornL.class, Direction.DOWN)
-                    && !isTouchingThorn(ThornR.class, Direction.DOWN)
-                    && !isTouching(Fish.class, Direction.DOWN)) {
-                setLocation(getX(), getY() - JPower);
-                JPower--;
-            } else if (onWall()
-                    || isTouchingThorn(ThornT.class, Direction.UP)
-                    || isTouchingThorn(ThornD.class, Direction.UP) ||
-                    isTouchingThorn(ThornL.class, Direction.UP) || isTouchingThorn(ThornR.class, Direction.UP)) {
-                JPower = 15;
-                VSpeed = 0;
-                keyPressed = 0;
-            } else {
-                setLocation(getX(), getY() - VSpeed);
-                VSpeed--;
-            }
-            if (inGround() || onGround()) {
-                JPower = 15;
-                VSpeed = 0;
-                keyPressed = 0;
-                Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
-                setLocation(getX(), getY());
-            }
-            if (belowWall()) {
-                JPower = 0;
-            }
-        }
-        if (Action == "moveL") {
 
-            if (Greenfoot.isKeyDown(Key)
-                    && !isTouching(Wall.class, Direction.LEFT)
-                    && !isTouchingThorn(ThornT.class, Direction.LEFT)
-                    && !isTouchingThorn(ThornD.class, Direction.LEFT)
-                    && !isTouchingThorn(ThornL.class, Direction.LEFT)
-                    && !isTouchingThorn(ThornR.class, Direction.LEFT)
-                    && !isTouching(Fish.class, Direction.LEFT)) {
-                Actor p = (Actor) getWorld().getObjects(P1.class).get(0);
-
-                p.setLocation(getX() - Speed, getY());
-                getWorld().moveCamera(-Speed);
-            }
-            else if(isTouching(Fish.class, Direction.LEFT)){
-                
-                Actor f = (Actor) getWorld().getObjectsAt(getX(), getY(), null);
-                getWorld().removeObject(f);
-            }
-            if (inGround() || onGround()) {
-                Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
-                setLocation(getX(), getY());
-            }
-        }
+//        if (Action == "moveL") {
+////             if(Greenfoot.isKeyDown(Key)){
+////                recordLastPosition();
+////            }
+//            if (Greenfoot.isKeyDown(Key)
+//                    && !isTouching(Wall.class, Direction.LEFT)
+//                    && !isTouchingThorn(ThornT.class, Direction.LEFT)
+//                    && !isTouchingThorn(ThornD.class, Direction.LEFT)
+//                    && !isTouchingThorn(ThornL.class, Direction.LEFT)
+//                    && !isTouchingThorn(ThornR.class, Direction.LEFT)
+//                    && !isTouching(Fish.class, Direction.LEFT)) {
+//                Actor p = (Actor) getWorld().getObjects(P1.class).get(0);
+//
+//                p.setLocation(getX() - Speed, getY());
+//                getWorld().moveCamera(-Speed);
+//            } else if (isTouching(Fish.class, Direction.LEFT)) {
+//
+//                Actor f = getTochingObject(Fish.class, Direction.LEFT);
+//                if (f instanceof Fish) {
+//                    getWorld().removeObject(f);
+//                }
+//            }
+//            if (inGround() || onGround()) {
+//                Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);
+//                setLocation(getX(), getY());
+//            }
+//        }
         if (Action == "moveR") {
-
+//             if(Greenfoot.isKeyDown(Key)){
+//                recordLastPosition();
+//            }
+            
             if (Greenfoot.isKeyDown(Key) &&
                     !isTouching(Wall.class, Direction.RIGHT)
                     && !isTouchingThorn(ThornT.class, Direction.RIGHT)
@@ -243,11 +232,12 @@ public class Player extends ScrollActor {
 
                 p.setLocation(getX() + Speed, getY());
                 getWorld().moveCamera(Speed);
-            }
-             else if(isTouching(Fish.class, Direction.RIGHT)){
-                
-                Actor f = (Actor) getWorld().getObjects(Fish.class).get(0);
-                getWorld().removeObject(f);
+            } else if (isTouching(Fish.class, Direction.RIGHT)) {
+
+                Actor f = getTochingObject(Fish.class, Direction.RIGHT);
+                if (f instanceof Fish) {
+                    getWorld().removeObject(f);
+                }
             }
             if (inGround() || onGround()) {
                 Actor ground = getOneObjectAtOffset(0, eighthWidth, Ground.class);

@@ -12,8 +12,8 @@ public class Worldy extends ScrollWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
 
-        //super(900, 700, 1, 4850, 700);
-        super(4850, 700, 1, 4850, 700); //for wall construction test
+        super(900, 700, 1, 4850, 700);
+       // super(4850, 700, 1, 4850, 700); //for wall construction test
 
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
@@ -26,7 +26,10 @@ public class Worldy extends ScrollWorld
         
         //attach obsever to the cat
         HealthPointObserver hpObserver = new HealthPointObserver(p1);
-        addObject(hpObserver, 800, 100);
+       
+       
+        
+        addObject(hpObserver, 900, 100);
         
         prepare();
     }
