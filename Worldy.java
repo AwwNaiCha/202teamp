@@ -12,8 +12,8 @@ public class Worldy extends ScrollWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
 
-        super(900, 700, 1, 4850, 700);
-       // super(4850, 700, 1, 4850, 700); //for wall construction test
+        //super(900, 700, 1, 4850, 700);
+        super(4850, 700, 1, 4850, 700); //for wall construction test
 
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
@@ -377,6 +377,44 @@ public class Worldy extends ScrollWorld
             Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3825, i * 50 + 575);
+        }
+        for(int i = 0; i < 4; i++)
+        {
+            MoveT m1 = new MoveT();
+            addObject(m1, 3025 + i * 200, 525);
+            m1.move();
+        }
+        for(int i = 0; i < 4; i++)
+        {
+            MoveT m1 = new MoveT();
+            addObject(m1, 3125 + i * 200, 585);
+            m1.move();
+        }
+        for(int i = 0; i < 8; i++)
+        {
+            MoveTT m1 = new MoveTT();
+            addObject(m1, 3025 + i * 100, 75);
+            m1.move();
+        }
+        for(int i = 0; i < 4; i++)
+        {
+            MoveTT m1 = new MoveTT();
+            addObject(m1, 3075 + i * 200, 105);
+            m1.move();
+        }
+        Fish f6 = new Fish();
+        addObject(f6, 3775, 225);
+        for(int sharp = 0; sharp < 3; sharp++)
+        {
+            ThornD thorn = new ThornD();
+            addObject(thorn, 32, 382);
+            thorn.setLocation(3175 + sharp * 200, 325);
+        }
+        for(int sharp = 0; sharp < 3; sharp++)
+        {
+            ThornT thorn = new ThornT();
+            addObject(thorn, 32, 382);
+            thorn.setLocation(3175 + sharp * 200, 425);
         }
         
         /**fifth page  
