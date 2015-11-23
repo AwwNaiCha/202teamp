@@ -408,7 +408,7 @@ public class Worldy extends ScrollWorld
         {
             ThornD thorn = new ThornD();
             addObject(thorn, 32, 382);
-            thorn.setLocation(3175 + sharp * 200, 325);
+            thorn.setLocation(3225 + sharp * 200, 325);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
@@ -526,7 +526,7 @@ public class Worldy extends ScrollWorld
         //set ThornT
         ThornD ThornT10 = new ThornD();
         addObject(ThornT10, 32, 382);
-        ThornT10.setLocation(4725, 175);
+        ThornT10.setLocation(4775, 175);
         ThornT ThornT11 = new ThornT();
         addObject(ThornT11, 32, 382);
         ThornT11.setLocation(4725, 625);
