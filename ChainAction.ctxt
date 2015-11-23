@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=Action
+comment0.target=ChainAction
 comment1.params=
 comment1.target=int\ getAnimationFrames()
 comment2.params=animationFrames

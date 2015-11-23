@@ -4,7 +4,7 @@ import java.lang.Exception;
 import java.lang.Override;
 import java.lang.System;
 import java.util.*;
-public class MoveRightAction extends Action{
+public class MoveRightAction extends ChainAction{
     @Override
     public void actOn(String key, Player player){
         if (Greenfoot.isKeyDown(key) &&

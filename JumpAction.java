@@ -3,7 +3,7 @@ import java.awt.Point;
 import java.lang.Override;
 import java.lang.System;
 import java.util.*;
-public class JumpAction extends Action{
+public class JumpAction extends ChainAction{
     @Override
     public void actOn(String key, Player player){
         boolean keyPressed = false;

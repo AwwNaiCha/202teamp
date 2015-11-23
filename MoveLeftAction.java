@@ -4,7 +4,7 @@ import java.lang.Exception;
 import java.lang.Override;
 import java.lang.System;
 import java.util.*;
-public class MoveLeftAction extends Action{
+public class MoveLeftAction extends ChainAction{
     @Override
     public void actOn(String key, Player player){
       

@@ -3,7 +3,7 @@ import java.awt.Point;
 import java.lang.System;
 import java.util.*;
 
-public class Action implements Actable{
+public class ChainAction implements Actable{
     public int getAnimationFrames() {
         return AnimationFrames;
     }
