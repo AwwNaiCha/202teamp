@@ -42,41 +42,47 @@ public class Worldy extends ScrollWorld
      */
     private void prepare()
     {
+        ShapeFactory shapefactory = new ShapeFactory();
+        
         /**build the outer wall actor
          * width of wall: 50
          */
         //top wall
         for(int top = 0; top < 97; top++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(25 + top * 50, 25);
         }
         //down wall
         for(int down = 0; down < 97; down++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(25 + down * 50, 675);
         }
         //left wall
         for(int left = 1; left < 13; left++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(25, 25 + left * 50);
         }
         //right wall
         for(int right = 1; right < 13; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4825, 25 + right * 50);
         }
         
         //moving ground
         Ground g = new Ground();
-        addObject(g, 1325, 475);
+        addObject(g, 1326, 475);
         g.move();
         
         /**first page
@@ -85,7 +91,8 @@ public class Worldy extends ScrollWorld
         //starting location
         for(int start = 0; start < 17; start++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(175 + start * 50, 175);
         }
@@ -102,29 +109,34 @@ public class Worldy extends ScrollWorld
         //page seperator
         for(int right = 1; right < 10; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(1025, 25 + right * 50);
         }
         //jumpers
-        Wall wall1 = new Wall();
+        Shape w1 = shapefactory.getShape("WALL");
+        Actor wall1 = (Actor) w1;
         addObject(wall1, 32, 382);
         wall1.setLocation(175, 625);
         for(int jump = 0; jump < 2; jump++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(275, 575 + jump * 50);
         }
         for(int jump = 0; jump < 4; jump++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(375, 475 + jump * 50);
         }
         for(int jump = 0; jump < 4; jump++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(525, 475 + jump * 50);
         }
@@ -148,7 +160,8 @@ public class Worldy extends ScrollWorld
         //page seperator
         for(int right = 1; right < 10; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(1975, 25 + right * 50);
         }
@@ -157,7 +170,8 @@ public class Worldy extends ScrollWorld
         {
             for(int j = 0; j < i; j++)
             {
-                Wall wall = new Wall();
+                Shape w = shapefactory.getShape("WALL");
+                Actor wall = (Actor) w;
                 addObject(wall, 32, 382);
                 wall.setLocation(1225 - j * 50, 425 + i * 50);
             }
@@ -166,7 +180,8 @@ public class Worldy extends ScrollWorld
         {
             for(int j = 0; j < i; j++)
             {
-                Wall wall = new Wall();
+                Shape w = shapefactory.getShape("WALL");
+                Actor wall = (Actor) w;
                 addObject(wall, 32, 382);
                 wall.setLocation(1775 + j * 50, 425 + i * 50);
             }
@@ -186,88 +201,103 @@ public class Worldy extends ScrollWorld
         //steps for left-top area
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2175 + step * 50, 575);
         }
         for(int step = 0; step < 3; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2025 + step * 50, 475);
         }
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2175 + step * 50, 375);
         }
         for(int step = 0; step < 3; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2025 + step * 50, 275);
         }
-        Wall step1 = new Wall();
+        Shape s1 = shapefactory.getShape("WALL");
+        Actor step1 = (Actor) s1;
         addObject(step1, 32, 382);
         step1.setLocation(2175, 175);
-        Wall step2 = new Wall();
+        Shape s2 = shapefactory.getShape("WALL");
+        Actor step2 = (Actor) s2;
         addObject(step2, 32, 382);
         step2.setLocation(2725, 125);
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2825 + step * 50, 125);
         }
         //area seperator
         for(int right = 3; right < 13; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2275, 25 + right * 50);
         }
         for(int right = 0; right < 8; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2325 + right * 50, 175);
         }
         //steps for right-down area
         for(int step = 0; step < 4; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2525 + step * 50, 575);
         }
         for(int step = 0; step < 4; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2325 + step * 50, 475);
         }
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2775, step * 50 + 275);
         }
         for(int step = 0; step < 6; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2525 + step * 50, 375);
         }
         for(int step = 0; step < 5; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2725, step * 50 + 425);
         }
         //page seperator
         for(int right = 1; right < 10; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2925, 25 + right * 50);
         }
@@ -281,7 +311,8 @@ public class Worldy extends ScrollWorld
         ThornT ThornT6 = new ThornT();
         addObject(ThornT6, 32, 382);
         ThornT6.setLocation(2875, 325);
-        Wall step3 = new Wall();
+        Shape s3 = shapefactory.getShape("WALL");
+        Actor step3 = (Actor) s3;
         addObject(step3, 32, 382);
         step3.setLocation(2875, 375);
         ThornT ThornT7 = new ThornT();
@@ -306,38 +337,44 @@ public class Worldy extends ScrollWorld
         //page seperator
         for(int right = 2; right < 13; right++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3875, 25 + right * 50);
         }
         //cross
         for(int i = 0; i < 17; i++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2975 + i * 50, 475);
         }
         for(int i = 0; i < 17; i++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3025 + i * 50, 275);
         }
         for(int i = 0; i < 2; i++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(2975, i * 50 + 375);
         }
         for(int i = 0; i < 2; i++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3825, i * 50 + 175);
         }
         for(int i = 0; i < 2; i++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3825, i * 50 + 575);
         }
@@ -347,23 +384,27 @@ public class Worldy extends ScrollWorld
          */
         for(int step = 0; step < 4; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4025 + step * 150, 625);
         }
         //jumper
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(3925, step * 200 + 175);
         }
-        Wall jump1 = new Wall();
+        Shape j1 = shapefactory.getShape("WALL");
+        Actor jump1 = (Actor) j1;
         addObject(jump1, 32, 382);
         jump1.setLocation(3925, 525);
         for(int step = 0; step < 3; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4025, step * 150 + 125);
         }
@@ -372,7 +413,8 @@ public class Worldy extends ScrollWorld
         //jump1.setLocation(2125, 525);
         for(int step = 0; step < 8; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4075, step * 50 + 175);
         }
@@ -380,54 +422,66 @@ public class Worldy extends ScrollWorld
         ThornT ThornT9 = new ThornT();
         addObject(ThornT9, 32, 382);
         ThornT9.setLocation(4125, 165);
-        Wall jump2 = new Wall();
+        Shape j2 = shapefactory.getShape("WALL");
+        Actor jump2 = (Actor) j2;
         addObject(jump2, 32, 382);
         jump2.setLocation(4175, 175);
-        Wall jump3 = new Wall();
+        Shape j3 = shapefactory.getShape("WALL");
+        Actor jump3 = (Actor) j3;
         addObject(jump3, 32, 382);
         jump3.setLocation(4125, 175);
-        Wall jump4 = new Wall();
+        Shape j4 = shapefactory.getShape("WALL");
+        Actor jump4 = (Actor) j4;
         addObject(jump4, 32, 382);
         jump4.setLocation(4225, 275);
-        Wall jump5 = new Wall();
+        Shape j5 = shapefactory.getShape("WALL");
+        Actor jump5 = (Actor) j5;
         addObject(jump5, 32, 382);
         jump5.setLocation(4425, 275);
-        Wall jump6 = new Wall();
+        Shape j6 = shapefactory.getShape("WALL");
+        Actor jump6 = (Actor) j6;
         addObject(jump6, 32, 382);
         jump6.setLocation(4125, 375);
-        Wall jump7 = new Wall();
+        Shape j7 = shapefactory.getShape("WALL");
+        Actor jump7 = (Actor) j7;
         addObject(jump7, 32, 382);
         jump7.setLocation(4175, 425);
         for(int step = 0; step < 6; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4325 + step * 50, 425);
         }
         for(int step = 0; step < 3; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4525 + step * 50, 375);
         }
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4625 + step * 50, 325);
         }
-        Wall jump8 = new Wall();
+        Shape j8 = shapefactory.getShape("WALL");
+        Actor jump8 = (Actor) j8;
         addObject(jump8, 32, 382);
         jump8.setLocation(4725, 275);
         for(int step = 0; step < 2; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4725 + step * 50, 125);
         }
         for(int step = 0; step < 3; step++)
         {
-            Wall wall = new Wall();
+            Shape w = shapefactory.getShape("WALL");
+            Actor wall = (Actor) w;
             addObject(wall, 32, 382);
             wall.setLocation(4575, step * 50 + 475);
         }

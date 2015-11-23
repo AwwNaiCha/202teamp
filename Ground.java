@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ground extends ScrollActor
+public class Ground extends ScrollActor implements Shape
 {
     /**
      * Act - do whatever the Ground wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int direction = 5;  
+    private int direction = 3;  
     public void act() 
     { 
         move(); 
@@ -21,7 +21,7 @@ public class Ground extends ScrollActor
     public void move() 
     { 
         // checking edges  
-        if ((direction < 0 && getGlobalX() == 1325) || (direction > 0 && getGlobalX() == 1675)) 
+        if ((direction < 0 && getGlobalX() == 1326) || (direction > 0 && getGlobalX() == 1674)) 
         {direction = -direction;} 
         move(direction);
     }
