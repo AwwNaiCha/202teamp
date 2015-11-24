@@ -73,13 +73,20 @@ public class Player extends ScrollActor {
     private Map<Direction, List<Integer>> thorndirectionMap;
     private List<Observer> observers = new ArrayList<Observer>();
     private int healthpoint_state = 5; // 
-
+    public boolean ifleft = false;
+    public boolean ifright = false;
+    public boolean ifup = false;
+    
     public int getHPState() {
         return healthpoint_state;
     }
 
     public void setHPState(int hpState) {
         this.healthpoint_state = hpState;
+        notifyAllObservers();
+    }
+    
+    public void findKeyState () {
         notifyAllObservers();
     }
 

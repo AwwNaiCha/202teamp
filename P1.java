@@ -66,12 +66,31 @@ public class P1 extends Player  {
 
 
         }
-
+        
+        ////////Keyaction state notified to observer
+       if(Greenfoot.isKeyDown("up")) {
+            ifup = true;
+        }
+        else {
+            ifup = false;
+        }
+        
+        if(Greenfoot.isKeyDown("left")) {
+            ifleft = true;
+            ifright = false;
+        }
+        
+        if(Greenfoot.isKeyDown("right")) {
+           ifright = true;
+           ifleft = false;
+        }
+       findKeyState ();
+        
+        
+        
+        
+        ///////////
         int hpState = 0;
-
-
-
-
 
         if (isTouchingThorn(ThornT.class, Direction.LEFT) ||
         isTouchingThorn(ThornT.class, Direction.RIGHT) ||
@@ -91,29 +110,38 @@ public class P1 extends Player  {
                   || isTouchingThorn(ThornR.class, Direction.DOWN)
                    || isTouchingThorn(ThornR.class, Direction.UP)
                 ) {
-
-
-
-//
+                    
+                        //
                     if(!lastMove.isEmpty()){
                         Point p = lastMove.peek();
                         lastX = (int)p.getX();
                         lastY = (int)p.getY();
                     }
+                    
+                    if(getHPState() > 1) {
 
-                setGlobalLocation(lastX, lastY);
-         //         addCameraFollower(getWorld().p1, 0, 0);
-       // getWorld().addObject(new FPS(), 85, 15);
-            getWorld().setCameraLocation(lastX, lastY);
-               
-            //System.out.println("resetting to " + getX() + " " + getY());
+                             setGlobalLocation(lastX, lastY);
+                        //         addCameraFollower(getWorld().p1, 0, 0);
+                            // getWorld().addObject(new FPS(), 85, 15);
+                            getWorld().setCameraLocation(lastX, lastY);
+                        }
+                        //System.out.println("resetting to " + getX() + " " + getY());
 
-                hpState = getHPState();
+                        hpState = getHPState();
 
+                        setHPState(--hpState);
+                   
+
+
+
+
+<<<<<<< Updated upstream
                 setHPState(--hpState);
                 
                 se = new KirraSE();
                 se.play();
+=======
+>>>>>>> Stashed changes
 
 
         } else
@@ -131,4 +159,6 @@ public class P1 extends Player  {
         }
 
     }
+    
+
 }

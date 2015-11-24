@@ -15,7 +15,7 @@ public class Worldy extends ScrollWorld
         //super(900, 700, 1, 4850, 700);
         super(4850, 700, 1, 4850, 700); //for wall construction test
 
-        setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
+        setPaintOrder(GameOver.class, P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
         P1 p1 = new P1();
@@ -25,7 +25,11 @@ public class Worldy extends ScrollWorld
         addObject(new FPS(), 85, 15);
         
         //attach obsever to the cat
+        PlayerImageObserver imageObserver = new PlayerImageObserver(p1);
+        GameOverObserver gmObserver = new GameOverObserver(p1);
         HealthPointObserver hpObserver = new HealthPointObserver(p1);
+        
+        
        
        
         
