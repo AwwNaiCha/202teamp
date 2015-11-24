@@ -98,13 +98,12 @@ public class Worldy extends ScrollWorld
         }
 
         Fish f1 = new Fish();
-        addObject(f1, 975, 125);
+        addObject(f1, 875, 125);
         //fish setting
-        for(int start = 0; start < 2; start++)
-        {
+        
             Fish f = new Fish();
-            addObject(f, 925 + start * 50, 125);
-        }        
+            addObject(f, 925, 125);
+             
 
         //page seperator
         for(int right = 1; right < 10; right++)
@@ -329,7 +328,11 @@ public class Worldy extends ScrollWorld
         addObject(f4, 2725, 325);
         
         Fish f5 = new Fish();
-        addObject(f5, 2175, 125);
+        addObject(f5, 2375,425);
+        
+        
+        Fish fx = new Fish();
+        addObject(fx, 2675,525);
         
         /**fourth page  
          * x: 2925 - 3875
@@ -411,8 +414,16 @@ public class Worldy extends ScrollWorld
             addObject(m, 3075 + i * 200, 105);
             move.act();
         }
+        
         Fish f6 = new Fish();
-        addObject(f6, 3775, 225);
+        addObject(f6, 3725, 425);
+        
+          Fish f7 = new Fish();
+        addObject(f7, 3075, 425);
+         Fish f8 = new Fish();
+        addObject(f8, 4850 -275, 625);
+        
+        
         for(int sharp = 0; sharp < 3; sharp++)
         {
             ThornD thorn = new ThornD();

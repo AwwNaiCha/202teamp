@@ -51,7 +51,7 @@ public class P1 extends Player  {
         if(lastMove.size() >=50){
             lastMove.poll();
         }
-        System.out.println(lastX + " " + lastY);
+     //System.out.println(lastX + " " + lastY);
         lastMove.add(point);
     }
 
