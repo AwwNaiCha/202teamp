@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GroundDecorator
+comment0.text=\n\ Write\ a\ description\ of\ class\ GroundDecorator\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=decoratedShape\ l1\ l2
+comment1.target=GroundDecorator(Shape,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

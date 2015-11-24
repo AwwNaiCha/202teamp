@@ -80,10 +80,12 @@ public class Worldy extends ScrollWorld
             wall.setLocation(4825, 25 + right * 50);
         }
         
-        //moving ground
-        Ground g = new Ground();
-        addObject(g, 1326, 475);
-        g.move();
+        //moving ground decorator
+        Shape ground = shapefactory.getShape("GROUND");
+        Shape g = new MovingGround(ground, 1326, 1674);
+        Actor cro = (Actor) g;
+        addObject(cro, 1326, 475);
+        ground.act();
         
         /**first page
          * x: 75 - 1025
@@ -142,13 +144,17 @@ public class Worldy extends ScrollWorld
         //set ThornT
         for(int jump = 0; jump < 3; jump++)
         {
-            ThornT ThornT1 = new ThornT();
-            addObject(ThornT1, 32, 382);
-            ThornT1.setLocation(475 + jump * 200, 625);
+            Shape t = shapefactory.getShape("THORNT");
+            Actor thornt1 = (Actor) t;
+            addObject(thornt1, 32, 382);
+            thornt1.setLocation(475 + jump * 200, 625);
         }
-        ThornT ThornT3 = new ThornT();
-        addObject(ThornT3, 32, 382);
-        ThornT3.setLocation(825, 625);
+        
+        Shape t3 = shapefactory.getShape("THORNT");
+        Actor thornt3 = (Actor) t3;
+        addObject(thornt3, 32, 382);
+        thornt3.setLocation(825, 625);
+        
         Fish f2 = new Fish();
         addObject(f2, 425, 625);
         
@@ -188,9 +194,10 @@ public class Worldy extends ScrollWorld
         //thorns
         for(int step = 0; step < 10; step++)
         {
-            ThornT ThornT = new ThornT();
-            addObject(ThornT, 32, 382);
-            ThornT.setLocation(1275 + step * 50, 625);
+            Shape t = shapefactory.getShape("THORNT");
+            Actor thornt = (Actor) t;
+            addObject(thornt, 32, 382);
+            thornt.setLocation(1275 + step * 50, 625);
         }
         
         
@@ -301,25 +308,35 @@ public class Worldy extends ScrollWorld
             wall.setLocation(2925, 25 + right * 50);
         }
         //set ThornT
-        ThornT ThornT4 = new ThornT();
-        addObject(ThornT4, 32, 382);
-        ThornT4.setLocation(2075, 225);
-        ThornT ThornT5 = new ThornT();
-        addObject(ThornT5, 32, 382);
-        ThornT5.setLocation(2225, 325);
-        ThornT ThornT6 = new ThornT();
-        addObject(ThornT6, 32, 382);
-        ThornT6.setLocation(2875, 325);
+        Shape t4 = shapefactory.getShape("THORNT");
+        Actor thornt4 = (Actor) t4;
+        addObject(thornt4, 32, 382);
+        thornt4.setLocation(2075, 225);
+       
+        Shape t5 = shapefactory.getShape("THORNT");
+        Actor thornt5 = (Actor) t5;
+        addObject(thornt5, 32, 382);
+        thornt5.setLocation(2225, 325);
+        
+        Shape t6 = shapefactory.getShape("THORNT");
+        Actor thornt6 = (Actor) t6;
+        addObject(thornt6, 32, 382);
+        thornt6.setLocation(2875, 325);
+        
         Shape s3 = shapefactory.getShape("WALL");
         Actor step3 = (Actor) s3;
         addObject(step3, 32, 382);
         step3.setLocation(2875, 375);
-        ThornT ThornT7 = new ThornT();
-        addObject(ThornT7, 32, 382);
-        ThornT7.setLocation(2775, 625);
-        ThornT ThornT8 = new ThornT();
-        addObject(ThornT8, 32, 382);
-        ThornT8.setLocation(2775, 225);
+        
+        Shape t7 = shapefactory.getShape("THORNT");
+        Actor thornt7 = (Actor) t7;
+        addObject(thornt7, 32, 382);
+        thornt7.setLocation(2775, 625);
+        
+        Shape t8 = shapefactory.getShape("THORNT");
+        Actor thornt8 = (Actor) t8;
+        addObject(thornt8, 32, 382);
+        thornt8.setLocation(2775, 225);
         //set Fishes
         Fish f3 = new Fish();
         addObject(f3, 2875, 75);
@@ -426,15 +443,18 @@ public class Worldy extends ScrollWorld
         
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornD thorn = new ThornD();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(3225 + sharp * 200, 325);
+            
+            Shape t = shapefactory.getShape("THORND");
+            Actor thornd = (Actor) t;
+            addObject(thornd, 32, 382);
+            thornd.setLocation(3225 + sharp * 200, 325);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornT thorn = new ThornT();
-            addObject(thorn, 32, 382);
-            thorn.setLocation(3175 + sharp * 200, 425);
+            Shape t = shapefactory.getShape("THORNT");
+            Actor thornt = (Actor) t;
+            addObject(thornt, 32, 382);
+            thornt.setLocation(3175 + sharp * 200, 425);
         }
         
         /**fifth page  
@@ -477,9 +497,10 @@ public class Worldy extends ScrollWorld
             wall.setLocation(4075, step * 50 + 175);
         }
         //hidden ThornT
-        ThornT ThornT9 = new ThornT();
-        addObject(ThornT9, 32, 382);
-        ThornT9.setLocation(4125, 165);
+        Shape t9 = shapefactory.getShape("THORNT");
+        Actor thornt9 = (Actor) t9;
+        addObject(thornt9, 32, 382);
+        thornt9.setLocation(4125, 165);
         Shape j2 = shapefactory.getShape("WALL");
         Actor jump2 = (Actor) j2;
         addObject(jump2, 32, 382);
@@ -544,82 +565,101 @@ public class Worldy extends ScrollWorld
             wall.setLocation(4575, step * 50 + 475);
         }
         //set ThornT
-        ThornD ThornT10 = new ThornD();
-        addObject(ThornT10, 32, 382);
-        ThornT10.setLocation(4775, 175);
-        ThornT ThornT11 = new ThornT();
-        addObject(ThornT11, 32, 382);
-        ThornT11.setLocation(4725, 625);
-        ThornT ThornT12 = new ThornT();
-        addObject(ThornT12, 32, 382);
-        ThornT12.setLocation(4675, 275);
-        ThornT ThornT13 = new ThornT();
-        addObject(ThornT13, 32, 382);
-        ThornT13.setLocation(4575, 325);
-        ThornL ThornT14 = new ThornL();
-        addObject(ThornT14, 32, 382);
-        ThornT14.setLocation(4775, 425);
+        Shape t10 = shapefactory.getShape("THORND");
+        Actor thornt10 = (Actor) t10;
+        addObject(thornt10, 32, 382);
+        thornt10.setLocation(4775, 175);
+        
+        Shape t11 = shapefactory.getShape("THORNT");
+        Actor thornt11 = (Actor) t11;
+        addObject(thornt11, 32, 382);
+        thornt11.setLocation(4725, 625);
+        
+        Shape t12 = shapefactory.getShape("THORNT");
+        Actor thornt12 = (Actor) t12;
+        addObject(thornt12, 32, 382);
+        thornt12.setLocation(4675, 275);
+        
+        Shape t13 = shapefactory.getShape("THORNT");
+        Actor thornt13 = (Actor) t13;
+        addObject(thornt13, 32, 382);
+        thornt13.setLocation(4575, 325);
+        
+        Shape t14 = shapefactory.getShape("THORNL");
+        Actor thornl14 = (Actor) t14;
+        addObject(thornl14, 32, 382);
+        thornl14.setLocation(4775, 425);
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornD ThornD = new ThornD();
-            addObject(ThornD, 32, 382);
-            ThornD.setLocation(3925, sharp * 200 + 225);
+            Shape d = shapefactory.getShape("THORND");
+            Actor thornd = (Actor) d;
+            addObject(thornd, 32, 382);
+            thornd.setLocation(3925, sharp * 200 + 225);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornD ThornD = new ThornD();
-            addObject(ThornD, 32, 382);
-            ThornD.setLocation(4025, sharp * 150 + 175);
+            Shape d = shapefactory.getShape("THORND");
+            Actor thornd = (Actor) d;
+            addObject(thornd, 32, 382);
+            thornd.setLocation(4025, sharp * 150 + 175);
         }
         //wheel-ThornT
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornL ThornL = new ThornL();
-            addObject(ThornL, 32, 382);
-            ThornL.setLocation(4175 + sharp * 200, 275);
+            Shape l = shapefactory.getShape("THORNL");
+            Actor thornl = (Actor) l;
+            addObject(thornl, 32, 382);
+            thornl.setLocation(4175 + sharp * 200, 275);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornT ThornT = new ThornT();
-            addObject(ThornT, 32, 382);
-            ThornT.setLocation(4225 + sharp * 200, 225);
+            Shape t = shapefactory.getShape("THORNT");
+            Actor thornt = (Actor) t;
+            addObject(thornt, 32, 382);
+            thornt.setLocation(4225 + sharp * 200, 225);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornR ThornR = new ThornR();
-            addObject(ThornR, 32, 382);
-            ThornR.setLocation(4275 + sharp * 200, 275);
+            Shape r = shapefactory.getShape("THORNR");
+            Actor thornr = (Actor) r;
+            addObject(thornr, 32, 382);
+            thornr.setLocation(4275 + sharp * 200, 275);
         }
         for(int sharp = 0; sharp < 2; sharp++)
         {
-            ThornD ThornD = new ThornD();
-            addObject(ThornD, 32, 382);
-            ThornD.setLocation(4225 + sharp * 200, 325);
+            Shape d = shapefactory.getShape("THORND");
+            Actor thornd = (Actor) d;
+            addObject(thornd, 32, 382);
+            thornd.setLocation(4225 + sharp * 200, 325);
         }
         //three-limit
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornD ThornD = new ThornD();
-            addObject(ThornD, 32, 382);
-            ThornD.setLocation(4175 + sharp * 150, 475);
+            Shape d = shapefactory.getShape("THORND");
+            Actor thornd = (Actor) d;
+            addObject(thornd, 32, 382);
+            thornd.setLocation(4175 + sharp * 150, 475);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornT ThornT = new ThornT();
-            addObject(ThornT, 32, 382);
-            ThornT.setLocation(4175 + sharp * 150, 575);
+            Shape t = shapefactory.getShape("THORNT");
+            Actor thornt = (Actor) t;
+            addObject(thornt, 32, 382);
+            thornt.setLocation(4175 + sharp * 150, 575);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornR ThornR = new ThornR();
-            addObject(ThornR, 32, 382);
-            ThornR.setLocation(4125 + sharp * 150, 525);
+            Shape r = shapefactory.getShape("THORNR");
+            Actor thornr = (Actor) r;
+            addObject(thornr, 32, 382);
+            thornr.setLocation(4125 + sharp * 150, 525);
         }
         for(int sharp = 0; sharp < 3; sharp++)
         {
-            ThornL ThornL = new ThornL();
-            addObject(ThornL, 32, 382);
-            ThornL.setLocation(4225 + sharp * 150, 525);
+            Shape l = shapefactory.getShape("THORNL");
+            Actor thornl = (Actor) l;
+            addObject(thornl, 32, 382);
+            thornl.setLocation(4225 + sharp * 150, 525);
         }
     }
 }

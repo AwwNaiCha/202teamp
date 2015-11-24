@@ -31,8 +31,6 @@ public class ShapeFactory extends Actor
       } else if(shapeType.equalsIgnoreCase("THORNR")){
          return new ThornR();
          
-      } else if(shapeType.equalsIgnoreCase("MOVET")){
-          return new MoveT();
       }
       
       return null;
