@@ -12,9 +12,8 @@ public class Worldy extends ScrollWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
 
-       super(900, 700, 1, 4850, 700);
-       //super(4850, 700, 1, 4850, 700); //for wall construction test
-
+        //super(900, 700, 1, 4850, 700);
+        super(4850, 700, 1, 4850, 700); //for wall construction test
 
         setPaintOrder(P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
@@ -381,9 +380,13 @@ public class Worldy extends ScrollWorld
         }
         for(int i = 0; i < 4; i++)
         {
-            MoveT m1 = new MoveT();
-            addObject(m1, 3025 + i * 200, 525);
-            m1.move();
+            //thorn decorator
+            Shape thorn = shapefactory.getShape("THORND");
+            Shape move = new MovingShape(thorn, 525, 624);
+            Actor m = (Actor) move;
+            addObject(m, 3025, 525);
+            m.setLocation(3025 + i * 200, 525);
+            move.act();
         }
         for(int i = 0; i < 4; i++)
         {

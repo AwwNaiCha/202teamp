@@ -23,6 +23,6 @@ public class Ground extends ScrollActor implements Shape
         // checking edges  
         if ((direction < 0 && getGlobalX() == 1326) || (direction > 0 && getGlobalX() == 1674)) 
         {direction = -direction;} 
-        move(direction);
+        setLocation(getX() + direction, getY());
     }
 }
