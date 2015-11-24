@@ -384,27 +384,32 @@ public class Worldy extends ScrollWorld
             Shape thorn = shapefactory.getShape("THORND");
             Shape move = new MovingShape(thorn, 525, 624);
             Actor m = (Actor) move;
-            addObject(m, 3025, 525);
-            m.setLocation(3025 + i * 200, 525);
+            addObject(m, 3025 + i * 200, 525);
             move.act();
         }
         for(int i = 0; i < 4; i++)
         {
-            MoveT m1 = new MoveT();
-            addObject(m1, 3125 + i * 200, 585);
-            m1.move();
+            Shape thorn = shapefactory.getShape("THORND");
+            Shape move = new MovingShape(thorn, 525, 624);
+            Actor m = (Actor) move;
+            addObject(m, 3125 + i * 200, 585);
+            move.act();
         }
         for(int i = 0; i < 8; i++)
         {
-            MoveTT m1 = new MoveTT();
-            addObject(m1, 3025 + i * 100, 75);
-            m1.move();
+            Shape thorn = shapefactory.getShape("THORND");
+            Shape move = new MovingShape(thorn, 75, 225);
+            Actor m = (Actor) move;
+            addObject(m, 3025 + i * 100, 75);
+            move.act();
         }
         for(int i = 0; i < 4; i++)
         {
-            MoveTT m1 = new MoveTT();
-            addObject(m1, 3075 + i * 200, 105);
-            m1.move();
+            Shape thorn = shapefactory.getShape("THORND");
+            Shape move = new MovingShape(thorn, 75, 225);
+            Actor m = (Actor) move;
+            addObject(m, 3075 + i * 200, 105);
+            move.act();
         }
         Fish f6 = new Fish();
         addObject(f6, 3775, 225);

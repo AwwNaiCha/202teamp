@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class ShapeDecorator extends ScrollActor implements Shape 
+public abstract class ShapeDecorator extends ThornD implements Shape 
 {
     protected Shape decoratedShape;
     protected int limit1;
