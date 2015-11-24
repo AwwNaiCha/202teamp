@@ -135,13 +135,12 @@ public class P1 extends Player  {
 
 
 
-<<<<<<< Updated upstream
+
                 setHPState(--hpState);
                 
                 se = new KirraSE();
                 se.play();
-=======
->>>>>>> Stashed changes
+
 
 
         } else
