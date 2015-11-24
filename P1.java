@@ -14,6 +14,8 @@ public class P1 extends Player  {
      * Act - do whatever the P1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private SoundEffect se; 
+     
     private Map<String, ChainAction> actionMap;
     private int lastX = 0;
     private int lastY = 0;
@@ -109,6 +111,9 @@ public class P1 extends Player  {
                 hpState = getHPState();
 
                 setHPState(--hpState);
+                
+                se = new KirraSE();
+                se.play();
 
 
         } else
@@ -120,6 +125,8 @@ public class P1 extends Player  {
                 || isTouching(Fish.class, Direction.UP)) {
             hpState = getHPState();
             setHPState(hpState + 1);
+            se = new CoinSE();
+            se.play();
         }
         }
 
