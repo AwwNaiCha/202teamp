@@ -243,7 +243,7 @@ public class Worldy extends ScrollWorld
             wall.setLocation(2825 + step * 50, 125);
         }
         //area seperator
-        for(int right = 3; right < 13; right++)
+        for(int right = 3; right < 12; right++)
         {
             Shape w = shapefactory.getShape("WALL");
             Actor wall = (Actor) w;
