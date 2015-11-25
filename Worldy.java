@@ -38,6 +38,7 @@ public class Worldy extends ScrollWorld
         addObject(hpObserver, 900, 100);
         
         prepare();
+        bgm.play();
     }
  
 
@@ -668,6 +669,6 @@ public class Worldy extends ScrollWorld
             thornl.setLocation(4225 + sharp * 150, 525);
         }
         
-        bgm.play();
+        
     }
 }
