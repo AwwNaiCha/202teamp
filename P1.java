@@ -130,13 +130,7 @@ public class P1 extends Player  {
                         hpState = getHPState();
 
                         setHPState(--hpState);
-                   
-
-
-
-
-
-                setHPState(--hpState);
+                
                 
                 se = new KirraSE();
                 se.play();
