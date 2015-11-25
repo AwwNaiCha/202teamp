@@ -16,7 +16,7 @@ public class Worldy extends ScrollWorld
 
         super(900, 700, 1, 4850, 700);
         //super(4850, 700, 1, 4850, 700); //for wall construction test
-
+        bgm.play();
         setPaintOrder(GameOver.class, P1.class, HealthPointObserver.class, Wall.class, Ground.class);
         
         /**starting point of the cat  */
@@ -38,7 +38,7 @@ public class Worldy extends ScrollWorld
         addObject(hpObserver, 900, 100);
         
         prepare();
-        bgm.play();
+        
     }
  
 
