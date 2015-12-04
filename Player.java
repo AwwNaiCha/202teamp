@@ -76,6 +76,7 @@ public class Player extends ScrollActor {
     public boolean ifleft = false;
     public boolean ifright = false;
     public boolean ifup = false;
+    public boolean isWin = false;
     
     public int getHPState() {
         return healthpoint_state;

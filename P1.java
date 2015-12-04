@@ -20,6 +20,7 @@ public class P1 extends Player  {
     private int lastX = 0;
     private int lastY = 0;
     protected Queue<Point> lastMove = new LinkedList<Point>();
+    private int finalcount = 0;
     public P1(){
         actionMap = new HashMap<>();
         //adding jump action
@@ -56,6 +57,18 @@ public class P1 extends Player  {
     }
 
     public void act() {
+        //for GameWin Observer
+       if(getOneIntersectingObject (FinalTarget.class) != null) {
+           isWin = true;
+       }
+        
+        if(isWin) {
+            finalcount++;
+            if(finalcount == 50) {
+                Greenfoot.stop();
+            }
+        }
+        
         for (String key: actionMap.keySet()){
            if(Greenfoot.isKeyDown(key)) {
                 recordLastPosition();

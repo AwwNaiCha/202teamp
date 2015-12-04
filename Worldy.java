@@ -16,8 +16,13 @@ public class Worldy extends ScrollWorld
 
         super(900, 700, 1, 4850, 700);
         //super(4850, 700, 1, 4850, 700); //for wall construction test
+<<<<<<< Updated upstream
         bgm.playLoop();
         setPaintOrder(GameOver.class, P1.class, HealthPointObserver.class, Wall.class, Ground.class);
+=======
+        bgm.play();
+        setPaintOrder(GameWin.class, GameWinMenu.class, GameOver.class, P1.class, HealthPointObserver.class, Wall.class, Ground.class);
+>>>>>>> Stashed changes
         
         /**starting point of the cat  */
         P1 p1 = new P1();
@@ -30,10 +35,13 @@ public class Worldy extends ScrollWorld
         PlayerImageObserver imageObserver = new PlayerImageObserver(p1);
         GameOverObserver gmObserver = new GameOverObserver(p1);
         HealthPointObserver hpObserver = new HealthPointObserver(p1);
+        GameWinObserver gwObserver = new GameWinObserver(p1);
         
-        
-       
-       
+        //add final target
+        FinalTarget finalTarget = new FinalTarget();
+        addObject(finalTarget, 133, 321);
+        //finalTarget.setLocation(500, 130);
+        finalTarget.setLocation(4770, 620);
         
         addObject(hpObserver, 900, 100);
         
