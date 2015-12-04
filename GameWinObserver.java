@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameWinObserver extends Observer
+public class GameWinObserver extends ScrollActor implements Observer
 {
     /**
      * Act - do whatever the GameWinObserver wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    protected Player player;
         public GameWinObserver(Player player){
         this.player = player;
         this.player.attach(this);

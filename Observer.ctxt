@@ -3,6 +3,7 @@ comment0.target=Observer
 comment0.text=\n\ Write\ a\ description\ of\ class\ Observer\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ update()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Observer\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

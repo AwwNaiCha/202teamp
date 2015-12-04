@@ -6,8 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayerImageObserver extends Observer
+public class PlayerImageObserver extends ScrollActor implements Observer 
 {
+    protected Player player;
     
     public PlayerImageObserver(Player player) {
         this.player = player;

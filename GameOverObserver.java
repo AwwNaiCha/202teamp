@@ -7,13 +7,13 @@ import java.awt.Font;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameOverObserver extends Observer
+public class GameOverObserver extends ScrollActor implements Observer 
 {
     /**
      * Act - do whatever the GameOverObserver wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    protected Player player;
     public GameOverObserver(Player player){
         this.player = player;
         this.player.attach(this);

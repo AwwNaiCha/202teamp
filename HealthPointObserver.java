@@ -8,11 +8,11 @@ import java.awt.Font;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HealthPointObserver extends Observer
+public class HealthPointObserver extends ScrollActor implements Observer 
 {
     int width = 400;
     int height = 100;
-    
+    protected Player player;
     public HealthPointObserver(Player player) {
         this.player = player;
         this.player.attach(this);

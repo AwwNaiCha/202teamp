@@ -7,18 +7,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 // this observer is used to observe player state
-public class Observer extends Actor
+public interface Observer
 {
     /**
      * Act - do whatever the Observer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    protected Player player;
-    public void update() {
-    }
     
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    public void update();
+    
+    public void act(); 
+   
 }
