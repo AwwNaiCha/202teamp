@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Dec 03 21:43:26 PST 2015
+#Thu Dec 03 22:28:18 PST 2015
 class.MoveT.superclass=ScrollActor
 target24.type=ClassTarget
 class.Worldy.superclass=ScrollWorld
@@ -533,9 +533,9 @@ dependency83.type=UsesDependency
 target18.showInterface=false
 target38.name=Actable
 target21.type=ClassTarget
-mainWindow.y=89
+mainWindow.y=150
 target13.name=PlayerImageObserver
-mainWindow.x=74
+mainWindow.x=396
 target16.y=250
 target16.x=160
 dependency28.from=Player
